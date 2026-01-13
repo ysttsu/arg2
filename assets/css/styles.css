@@ -40,6 +40,37 @@ body {
   margin-bottom: 32px;
 }
 
+.top-nav {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.top-nav a {
+  color: var(--accent-2);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.top-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-2);
+}
+
+.nav-sep {
+  color: var(--muted);
+}
+
 .eyebrow {
   font-size: 0.85rem;
   letter-spacing: 0.18em;
@@ -95,6 +126,12 @@ h1 {
 .board {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.chat-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   gap: 24px;
 }
 
@@ -292,12 +329,75 @@ button.ghost {
   transform: translateY(0);
 }
 
+.chat-window {
+  margin-top: 20px;
+  background: #fffaf1;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  min-height: 320px;
+  display: grid;
+  gap: 12px;
+}
+
+.chat-line {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(143, 75, 45, 0.08);
+  border: 1px solid rgba(143, 75, 45, 0.18);
+}
+
+.chat-line.system {
+  background: rgba(59, 90, 90, 0.12);
+  border-color: rgba(59, 90, 90, 0.3);
+  color: var(--accent-2);
+}
+
+.chat-time {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.chat-who {
+  font-weight: 600;
+}
+
+.chat-text {
+  line-height: 1.5;
+}
+
+.restore-card {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.85);
+  display: grid;
+  gap: 8px;
+}
+
+.restore-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.restore-desc {
+  margin: 0;
+  color: var(--muted);
+}
+
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
   }
 
   .board {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-layout {
     grid-template-columns: 1fr;
   }
 }
