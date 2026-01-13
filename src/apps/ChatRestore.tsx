@@ -1,9 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { WindowProps } from "prozilla-os";
 
-import { LockedNotice } from "../components/LockedNotice";
-import { useChapter } from "../state/chapter";
-
 type ChatEntry = { time: string; who: string; text: string };
 
 const baseLog: ChatEntry[] = [
@@ -32,7 +29,6 @@ const fullLog: ChatEntry[] = [
 ];
 
 export function ChatRestore({ app }: WindowProps) {
-  const { chapter, setChapter } = useChapter();
   const [stage, setStage] = useState<"missing" | "partial" | "full">("missing");
 
   const log = useMemo(() => {
@@ -50,8 +46,6 @@ export function ChatRestore({ app }: WindowProps) {
         <p>チャットログの欠落を発見し、段階的に復元する。</p>
         <span className="badge">状態: {status}</span>
       </div>
-
-      <LockedNotice required={2} />
 
       <div className="section">
         <h2>チャットログ</h2>
@@ -75,9 +69,6 @@ export function ChatRestore({ app }: WindowProps) {
             disabled={stage !== "missing"}
             onClick={() => {
               setStage("partial");
-              if (chapter < 2) {
-                setChapter(2);
-              }
             }}
           >
             部分復元を試みる
