@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ARG2 - Chapter 1 Evidence Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Chapter 1 / Evidence Alignment</p>
+        <h1>3点一致の証拠提出</h1>
+        <p class="lead">
+          死後も動いていたという違和感を、客観的な3点の証拠で確定する。
+          カテゴリA/B/Cから1つずつ選び、提出を有効化してください。
+        </p>
+      </div>
+      <div class="status-card" id="statusCard">
+        <p class="status-label">提出状況</p>
+        <p class="status-value" id="statusValue">未提出</p>
+        <p class="status-hint" id="statusHint">3カテゴリが揃うと提出できます。</p>
+      </div>
+    </header>
+
+    <main class="board">
+      <section class="panel">
+        <div class="panel-header">
+          <h2>証拠一覧</h2>
+          <p>ドラッグまたはクリックでスクラップに配置。</p>
+        </div>
+        <div class="evidence-grid" id="evidenceGrid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>スクラップボード</h2>
+          <p>カテゴリA/B/Cに1件ずつ。</p>
+        </div>
+        <div class="scrapbook" id="scrapbook">
+          <div class="slot" data-category="A">
+            <div class="slot-label">A: 交通/宿</div>
+            <div class="slot-body">ここに配置</div>
+          </div>
+          <div class="slot" data-category="B">
+            <div class="slot-label">B: 受付/入場</div>
+            <div class="slot-body">ここに配置</div>
+          </div>
+          <div class="slot" data-category="C">
+            <div class="slot-label">C: 現地証拠</div>
+            <div class="slot-body">ここに配置</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="ghost" id="resetBtn" type="button">リセット</button>
+          <button class="primary" id="submitBtn" type="button" disabled>提出する</button>
+        </div>
+
+        <div class="result" id="result">
+          <p class="result-title">提出完了</p>
+          <p class="result-body">パスワードのヒントが解放されました。</p>
+          <p class="result-hint">パス: 推しの誕生日（MMDD）</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>ARG2 Prototype — Evidence Alignment (G1)</p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
