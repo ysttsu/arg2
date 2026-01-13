@@ -129,6 +129,105 @@ h1 {
   gap: 24px;
 }
 
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.chapter-selector {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chapter-selector button {
+  background: rgba(143, 75, 45, 0.1);
+  color: var(--ink);
+  border-color: rgba(143, 75, 45, 0.3);
+}
+
+.chapter-selector button.active {
+  background: var(--accent);
+  color: #fff8f0;
+  border-color: transparent;
+}
+
+.app-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.app-card {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  color: var(--ink);
+  display: grid;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(31, 26, 23, 0.12);
+}
+
+.app-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.locked-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 26, 23, 0.65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 10;
+}
+
+.locked-overlay.show {
+  display: flex;
+}
+
+.locked-card {
+  background: #fff7ee;
+  border-radius: 24px;
+  padding: 24px;
+  max-width: 420px;
+  text-align: center;
+  border: 1px solid rgba(31, 26, 23, 0.12);
+}
+
+.locked-title {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.locked-message,
+.locked-action {
+  margin: 0;
+  color: var(--muted);
+}
+
+body.locked .page {
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.feature-locked {
+  opacity: 0.5;
+  filter: grayscale(0.3);
+}
+
 .chat-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);

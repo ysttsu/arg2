@@ -9,11 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
+<body data-required-chapter="1">
   <div class="page">
     <header class="hero">
       <div>
         <nav class="top-nav">
+          <a href="desktop.html">Desktop</a>
+          <span class="nav-sep">/</span>
           <a class="active" href="index.html">Chapter 1</a>
           <span class="nav-sep">/</span>
           <a href="chat.html">Chapter 2</a>
@@ -81,8 +83,17 @@
     </footer>
   </div>
 
+  <div class="locked-overlay">
+    <div class="locked-card">
+      <p class="locked-title">ロック中</p>
+      <p class="locked-message">このページは Chapter 1 で解放されます。</p>
+      <p class="locked-action">現在の章: Chapter 0</p>
+    </div>
+  </div>
+
   <div class="toast" id="toast"></div>
 
+  <script src="assets/js/chapter.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
