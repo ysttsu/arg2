@@ -98,13 +98,13 @@ export function loadArg2Data(root: VirtualRoot) {
     "内容: QRコード発行済み / 本人確認あり"
   ]);
 
-  const venuePhoto = new VirtualFile("live_venue_photo", "jpg");
-  venuePhoto.setSource(makeSvgImage("Venue Photo", "#8f4b2d"));
-  photos.files.push(venuePhoto);
+  photos.createFile("live_venue_photo", "jpg", (file) => {
+    file.setSource(makeSvgImage("Venue Photo", "#8f4b2d"));
+  });
 
-  const alibiPhoto = new VirtualFile("alibi_photo_1", "png");
-  alibiPhoto.setSource(makeSvgImage("Alibi", "#3b5a5a"));
-  photos.files.push(alibiPhoto);
+  photos.createFile("alibi_photo_1", "png", (file) => {
+    file.setSource(makeSvgImage("Alibi", "#3b5a5a"));
+  });
 
   createTextFile(browser, "official_announcement", "html", [
     "2025年12月17日 10:00",
