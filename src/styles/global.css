@@ -1,0 +1,167 @@
+:root {
+  color-scheme: light;
+  font-family: "Shippori Mincho", serif;
+}
+
+body {
+  margin: 0;
+  font-family: "Shippori Mincho", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-shell {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.section {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 16px;
+  background: #ffffff;
+  display: grid;
+  gap: 10px;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #151515;
+  font-weight: 700;
+}
+
+.section p {
+  margin: 0;
+  color: #2f2f2f;
+  line-height: 1.6;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e3e3e3;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  color: #1f1f1f;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  border-radius: 10px;
+  padding: 12px;
+  background: #f7f7f7;
+  border: 1px solid #d4d4d4;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  font-family: inherit;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #8f4b2d;
+  color: #fff;
+  border-color: transparent;
+}
+
+button.ghost {
+  background: transparent;
+  color: #3b5a5a;
+  border-color: rgba(59, 90, 90, 0.4);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.locked {
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px dashed #7a7a7a;
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+.evidence-list {
+  display: grid;
+  gap: 10px;
+}
+
+.evidence-item {
+  border-radius: 10px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #c9c9c9;
+  cursor: grab;
+}
+
+.evidence-item:active {
+  cursor: grabbing;
+}
+
+.slot {
+  border-radius: 10px;
+  border: 1px dashed #6f6f6f;
+  padding: 10px;
+  min-height: 70px;
+  display: grid;
+  gap: 6px;
+}
+
+.slot.drag-over {
+  border-color: #3b5a5a;
+  background: rgba(59, 90, 90, 0.08);
+}
+
+.chat-line {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #f7efe9;
+  border: 1px solid #d7bfb1;
+  color: #1f1f1f;
+}
+
+.chat-line.system {
+  background: rgba(59, 90, 90, 0.12);
+  border-color: rgba(59, 90, 90, 0.3);
+  color: #1f3f3f;
+}
+
+.diff-line {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #f7efe9;
+  border: 1px solid #d7bfb1;
+  color: #1f1f1f;
+}
+
+.diff-line.alert {
+  background: rgba(162, 59, 48, 0.12);
+  border-color: rgba(162, 59, 48, 0.4);
+  color: #a23b30;
+}

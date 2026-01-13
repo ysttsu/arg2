@@ -1,0 +1,11 @@
+# arg2 project overview
+- Purpose: React/Vite project for "arg2" (README: 二作目). UI appears to be a desktop-style mystery experience built on prozilla-os.
+- Tech stack: React 18 + TypeScript, Vite 7, prozilla-os, CSS.
+- Entry points: `index.html` and `src/main.tsx`.
+- Structure:
+  - `src/main.tsx`: app bootstrap and ProzillaOS config.
+  - `src/apps/`: app windows (NotesApp, BrowserApp, ExplorerApp, etc.).
+  - `src/components/`: shared UI components.
+  - `src/os/`: OS config, icons, virtual drive helpers.
+  - `src/state/`: app state.
+  - `src/styles/`: global CSS.
